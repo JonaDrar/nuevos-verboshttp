@@ -2,10 +2,14 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const productosRouter = require('./routes/productos.route');
+const usuariosRouter = require('./routes/usuarios.route');
 
 app.use(express.json());
 
-app.use('/productos', productosRouter);
+
+
+app.use('/productos', productosRouter); 
+app.use('/usuarios', usuariosRouter); 
 
 app.get('/', (req, res) => {
   res.send('Hola mundo');

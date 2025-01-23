@@ -1,0 +1,22 @@
+CRUD
+
+C Create  Crear       POST
+R Read    Leer        GET
+U Update  Actualizar  PUT / PATCH
+D Delete  Borrar      DELETE
+
+
+
+PUT: Actualiza todos los campos
+PATCH: Actualiza parcialmente el recurso
+
+
+{
+  nombre: 'Juan',
+  apellido: 'Perez',
+}
+
+
+app.put -> { nombre: 'Alexis', apellido: 'Parra' }
+
+app.patch -> { nombre: 'Alexis' }
