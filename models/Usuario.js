@@ -45,7 +45,14 @@ class Usuario {
     this.guardar();
   }
 
-  obtenerUsuarioPorId(id) { //TAREA
+  obtenerUsuarioPorId(id) { 
+    try {
+      const usuarioObtenido = this.usuarios.find(usuario => usuario.id === id);
+      return usuarioObtenido;
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
   }
 }
 

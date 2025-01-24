@@ -10,7 +10,9 @@ const obtenerTodosLosUsuarios = (req, res) => {
 };
 
 const obtenerUsuarioPorId = (req, res) => {
-  res.send('Obteniendo usuario por ID'); //TAREA
+  const id = req.params.id;  
+  const usuarioObtenido = usuario.obtenerUsuarioPorId(id);
+  res.send(usuarioObtenido);
 }
 
 const crearUsuario = (req, res) => {
